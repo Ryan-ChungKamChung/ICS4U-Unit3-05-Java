@@ -64,5 +64,7 @@ final class Main {
         vehicle2.brake(brake);
 
         formatted(vehicle2);
+
+        System.out.println("\nDone.");
     }
 }
