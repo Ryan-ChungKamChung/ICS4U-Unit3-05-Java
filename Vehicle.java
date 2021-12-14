@@ -22,10 +22,10 @@ public class Vehicle {
     /**
      * Instantiates a Vehicle.
      *
-     * @param licensePlate sets the license plate
-     * @param colour sets the colour
-     * @param numOfDoors sets the number of doors
-     * @param maxSpeed sets the max speed
+     * @param newLicensePlate sets the license plate
+     * @param newColour sets the colour
+     * @param newNumOfDoors sets the number of doors
+     * @param newMaxSpeed sets the max speed
      * */
     public Vehicle(final String newLicensePlate, final String newColour,
         final int newNumOfDoors, final int newMaxSpeed) {
