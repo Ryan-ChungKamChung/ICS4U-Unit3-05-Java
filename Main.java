@@ -7,7 +7,7 @@
  */
 
 /** This is a stub program for the Vehicle class. */
-class Main {
+final class Main {
 
     /**
      * Prevents instantiation.
@@ -21,32 +21,48 @@ class Main {
     }
 
     /**
+     * Prints a formatted String output.
+     *
+     * @param vehicle Vehicle class
+     * */
+    public static void formatted(final Vehicle vehicle) {
+        System.out.println("\nLicense Plate: " + vehicle.getLicensePlate()
+                + "\nColour: " + vehicle.getColour()
+                + "\nNumber of Doors: " + vehicle.getNumOfDoors()
+                + "\nMax Speed: " + vehicle.getMaxSpeed()
+                + "\nCurrent Speed: " + vehicle.getSpeed());
+    }
+
+    /**
      * Creates 2 vehicle classes and uses its getters, setters and methods.
      *
      * @param args No args will be used.
      */
     public static void main(final String[] args) {
-        Vehicle vehicle1 = new Vehicle("ASDF404", "Red", 4, 150);
-        Vehicle vehicle2 = new Vehicle("QWER123", "Blue", 2, 200); 
+
+        final int numOfDoors1 = 4;
+        final int numOfDoors2 = 2;
+        final int maxSpeed1 = 150;
+        final int maxSpeed2 = 200;
+        final int accelerate1 = 60;
+        final int accelerate2 = 75;
+        final int brake = 60;
+
+        final Vehicle vehicle1 = new Vehicle(
+            "ASDF404", "Red", numOfDoors1, maxSpeed1);
+        final Vehicle vehicle2 = new Vehicle(
+            "QWER123", "Blue", numOfDoors2, maxSpeed2);
 
         vehicle1.setLicensePlate("FGHJ968");
         vehicle1.setColour("Green");
-        vehicle1.accelerate(60);
+        vehicle1.accelerate(accelerate1);
 
-        System.out.println("\nLicense Plate: " + vehicle1.getLicensePlate()
-                + "\nColour: " + vehicle1.getColour()
-                + "\nNumber of Doors: " + vehicle1.getNumOfDoors()
-                + "\nMax Speed: " + vehicle1.getMaxSpeed()
-                + "\nCurrent Speed: " + vehicle1.getSpeed());
+        formatted(vehicle1);
 
         vehicle2.setColour("Black");
-        vehicle2.accelerate(75);
-        vehicle2.brake(60);
+        vehicle2.accelerate(accelerate2);
+        vehicle2.brake(brake);
 
-        System.out.println("\nLicense Plate: " + vehicle2.getLicensePlate()
-                + "\nColour: " + vehicle2.getColour()
-                + "\nNumber of Doors: " + vehicle2.getNumOfDoors()
-                + "\nMax Speed: " + vehicle2.getMaxSpeed()
-                + "\nCurrent Speed: " + vehicle2.getSpeed());
+        formatted(vehicle2);
     }
 }
