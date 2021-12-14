@@ -27,13 +27,13 @@ public class Vehicle {
      * @param numOfDoors sets the number of doors
      * @param maxSpeed sets the max speed
      * */
-    public Vehicle(final String licensePlate, final String colour,
-        final int numOfDoors, final int maxSpeed) {
+    public Vehicle(final String newLicensePlate, final String newColour,
+        final int newNumOfDoors, final int newMaxSpeed) {
 
-        this.licensePlate = licensePlate;
-        this.colour = colour;
-        this.numOfDoors = numOfDoors;
-        this.maxSpeed = maxSpeed;
+        this.licensePlate = newLicensePlate;
+        this.colour = newColour;
+        this.numOfDoors = newNumOfDoors;
+        this.maxSpeed = newMaxSpeed;
         this.speed = 0;
     }
 
@@ -105,7 +105,7 @@ public class Vehicle {
      *
      * @param accelerateBy increase the speed by this amount
      * */
-    public void accelerate(int accelerateBy) {
+    public void accelerate(final int accelerateBy) {
         this.speed += accelerateBy;
     }
 
@@ -114,7 +114,7 @@ public class Vehicle {
      *
      * @param brakeBy decrease the speed by this amount
      * */
-    public void brake(int brakeBy) {
+    public void brake(final int brakeBy) {
         this.speed -= brakeBy;
     }
 }
